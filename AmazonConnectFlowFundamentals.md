@@ -15,7 +15,7 @@ Amazon Connect defines customer journeys.
 
 It defines paths for both customers and agents.  
 
-### Default and ssample flows
+### Default and sample flows
 
 Available in every new instance  
 
