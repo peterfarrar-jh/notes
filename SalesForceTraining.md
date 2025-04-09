@@ -86,7 +86,7 @@ That's it.
 
 ---
 
-# Create a detail record for a master-detail relationship
+## Create a detail record for a master-detail relationship
 
 1. In the app, choose the master field.
 2. Click on the record that you want to add detail records to
@@ -98,3 +98,95 @@ That's it.
 That's it.
 
 ---
+
+## Import data into SalesForce
+
+* Data Import Wizard
+* Data Loader
+
+### Data Import Wizard
+
+* Loads up to 49,999 records
+* Supports many object types
+* Runs interactively
+
+### Data Loader
+
+* Loads up to 150,000,000 records
+* Supports all object types
+* Can be automated
+
+#### Salesforce data import guidelines  
+
+* Use existing software to export a file in .csv
+* Clean up data in the csv file. Remove duplicates and unnecessary information. Check data for accuracy and consistancy. Correct spelling and other errors. Enforce naming conventions.
+* Compare fields with the Salesforce fields you want to import into. Verify the fields will be mapped into the correct fields. You may need to fine tune the mapping first. You can find information to help you with that [here](https://help.salesforce.com/s/articleView?language=en_US&id=sf.field_mapping_for_other_data_sources_and_organization_import.htm&type=5&_ga=2.222256024.1234867830.1744045172-73680456.1743707792)
+* Make any configurations required to handle the imported data.
+
+It is recommended to test imports with a small file first, to insure everything is mapping correctly.  
+
+Remember to turn off any workflows you don't want to fire when performing imports.  
+
+### Using the Data Import Wizard
+
+#### Start the wizard
+
+1. From Setup, ender Data Import Wizard in the Quick Find box. Select **Data Import Wizard**.
+2. Review the welcome page. Click **Launch Wizard**.
+
+#### Choose the data to import
+
+1. To import accounts, contacts, leads, solutions, person accounts, or campaign members, click **Standard Objects**. For other objects click **Custom Objects**.
+2. Specify _add new records_, _update existing records_, or _add and update records_.
+3. Specify matching and other criteria.
+4. Specify the file to import, either by drag-and-drop or click and navigate.
+5. Choose the character encoding method.
+6. Click **Next**.
+
+#### Map data fields to Salesforce data fields
+
+The wizard tries to guess as many data field types as it can. Verify these are correct and map the other field types manually.  
+
+1. Scan the list of mapped fields.
+2. Click **Map** to the left of each unmapped field.
+3. Choose the Salesforce fields from the dialog box and click **Map**.
+4. For fields that were incorrectly mapped automatically, click **Change** and select the appropriate type and click **Map**.
+5. Click **Next**.
+
+#### Review and start import
+
+1. Review information on the Review page. If you need to make changes click **Previous**.
+2. Click **Start Import**.
+
+#### Check the import status
+
+Enter "Bulk Data Load Jobs" in the Quick Find Box and select **Bulk Data Load Jobs**.
+
+* Multi-Select Picklists: To import multiple values into a multi-select picklist, separate the values by a semicolon in your import file.
+Checkboxes—To import data into a checkbox field, use 1 for checked values and 0 for unchecked values.
+* Default Values: For picklist, multi-select picklist, and checkbox fields, if you do not map the field in the import wizard, the default value for the field, if any, is automatically inserted into the new or updated record.
+* Date/Time Fields: Ensure that the format of any date/time fields you are importing matches how they display in Salesforce per your locale setting.
+Formula Fields—Formula fields cannot accept imported data because they are read-only.
+* Field Validation Rules: Salesforce runs validation rules on records before they are imported. Records that fail validation aren’t imported. Consider deactivating the appropriate validation rules before running an import if they affect the records you are importing.
+
+---
+
+## Export data out of SalesForce
+
+* Data Export Service
+* Data Loader
+
+### Using the Data Export Service
+
+1. From Setup, enter "Data Export" in the Quick Find box, then select **Data Export** and **Export Now** or **Schedule Export**.
+   * Export Now exports immediately, if enough time has elapsed since the last export.
+   * Schedule Export schedules an export to run at monthly intervals
+2. Select an encoding for the export file
+3. Select options for any attachments
+4. Optionally select Replace carriage returns with spaces
+5. If scheduling exports, select frequency, start and end dates, and time of day
+6. Under Exported Data, select the types of data to export (**Include all data** is recommended if you're not sure)
+7. Click **Start Export** or **Save**. You will receive an email when the export is completed.
+
+Exports are created in a zip file. The zip file is deleted 48 hours after the export completes.  
+
