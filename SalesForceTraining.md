@@ -190,3 +190,17 @@ Formula Fields—Formula fields cannot accept imported data because they are rea
 
 Exports are created in a zip file. The zip file is deleted 48 hours after the export completes.  
 
+### Create a Lightning App
+
+1. Use the gear icon to find the Setup App
+2. In the Quick Find Box type `App` and select App Manager.
+3. In the Top right corner of the App Manager, click **New Lightning App**
+4. Fill in details in the Wizard and click **Next**
+5. On App Options, click **Next**
+6. On Utility Items, click **Next**
+7. Add navigation items (For this demo add: Home, Chatter, Groups, Energy Audits, Accounts, Contacts, Products, Tasks) and click **Next**
+8. In User Profile select "System Administrator" This is not how to do it in production, just for learning in a sandbox.
+9. Cllick **Save and Finish**
+
+
+
