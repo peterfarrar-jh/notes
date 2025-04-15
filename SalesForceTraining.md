@@ -190,7 +190,9 @@ Formula Fields—Formula fields cannot accept imported data because they are rea
 
 Exports are created in a zip file. The zip file is deleted 48 hours after the export completes.  
 
-### Create a Lightning App
+---
+
+## Create a Lightning App
 
 1. Use the gear icon to find the Setup App
 2. In the Quick Find Box type `App` and select App Manager.
@@ -200,7 +202,49 @@ Exports are created in a zip file. The zip file is deleted 48 hours after the ex
 6. On Utility Items, click **Next**
 7. Add navigation items (For this demo add: Home, Chatter, Groups, Energy Audits, Accounts, Contacts, Products, Tasks) and click **Next**
 8. In User Profile select "System Administrator" This is not how to do it in production, just for learning in a sandbox.
-9. Cllick **Save and Finish**
+9. Click **Save and Finish**
 
+That's it.  
 
+---
+
+## Create and Customize View Lists
+
+### Create a List View
+
+1. In the App Launcher (top left) Enter `Sales` and select the Sales app, then click on the Accounts tab.
+2. The list view controls is a drop down in the top right corner with a gear like icon. Click on that and select 'New'.
+3. Name the list and select **All users can see this list view**.
+4. Click **Save**.
+5. In the top right, click on the funnel icon and select **Add Filter**.
+6. Select your criteria (For this example we selected Type equals Customer - Channel) then click **Done**
+7. Click **Save**.
+8. Add a second filter (inthis case State/Province equals "WA,OR,CA")
+
+### Customize a List View
+
+1. The list view controls is a drop down in the top right corner with a gear like icon. Click on that and select 'Select Fields to Display'.
+2. Move fields to and from Available Fields/Visible Fields. Click **Save**.
+
+**Note:** Hover over cells. If there is a pencil icon on the right side of the cell, you can directly edit that cell in the list. If there is a padlock, you can not.  
+
+### Create a List View Chart
+
+In this example there is assumed to be an existing sales app.
+
+1. Click on the Opportunities tab.
+2. Use the dropdown menu (Top right downward facing triangle, next to the Page Heading) to select **All Opportunities**.
+3. Click the charts menu (Top left... I think it's supposed to look like a pie chart?). A Charts menu will appear.
+4. Select the gear icon in the Charts menu and select **New Chart**.
+5. Name the chart. Select the chart type (Donut), Aggregate Type and Field (Sum/Amount), abd Grouping Field (Account Name).
+6. Click **Save**.
+
+### Resources:
+
+* [Salesforce Help: Create or Clone a List View in Lightning Experience](https://help.salesforce.com/HTViewHelpDoc?id=customviews_lex.htm&language=en_US&_ga=2.239595207.574000836.1744657100-73680456.1743707792)
+* [Salesforce Help: Edit List View Filters in Lightning Experience](https://help.salesforce.com/HTViewHelpDoc?id=customviews_edit_filters_lex.htm&language=en_US&_ga=2.239595207.574000836.1744657100-73680456.1743707792)
+* [Salesforce Help: Create a List View Chart in Lightning Experience](https://help.salesforce.com/HTViewHelpDoc?id=customviews_listview_chart_create_lex.htm&language=en_US&_ga=2.239595207.574000836.1744657100-73680456.1743707792)
+* [Salesforce Help: Update Records Inline from a List View in Lightning Experience](https://help.salesforce.com/HTViewHelpDoc?id=customviews_edit_inline_listview_lex.htm&language=en_US&_ga=2.38873831.574000836.1744657100-73680456.1743707792)
+
+---
 
