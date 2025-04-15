@@ -248,3 +248,28 @@ In this example there is assumed to be an existing sales app.
 
 ---
 
+## Customize Record Highlights with Compact Layouts
+
+### Create a Compact Layout
+
+1. From Setup click **Object Manager** and select the object to build a compact layout for (Energy Audit)
+2. Click Compact Layouts (left side menu)
+3. Click **New** (top right corner)
+4. Give the Label a name (Energy Audit Compact Layout). **Tab** will auto populate the name field.
+5. Add fields to the layout using the **Select Compact Layout Fields** menu and click **Save**
+6. Click **Compact Layout Assignment** and then **Edit Assignment**
+7. Select the layout from the **Primary Compact Layout** dropdown and click **Save**
+
+That's it. The compact layout form is used at the top of record pages, and on mobile.  
+
+### Resources:
+
+* [Salesforce Help: Compact Layouts](https://help.salesforce.com/HTViewHelpDoc?id=compact_layout_overview.htm&language=en_US&_ga=2.39174887.574000836.1744657100-73680456.1743707792)
+* [Salesforce Help: Notes on Compact Layouts](https://help.salesforce.com/HTViewHelpDoc?id=compact_layout_notes.htm&language=en_US&_ga=2.39174887.574000836.1744657100-73680456.1743707792)
+* [Salesforce Help: Assign Compact Layouts to Record Types](https://help.salesforce.com/HTViewHelpDoc?id=compact_layout_assign.htm&language=en_US&_ga=2.34605669.574000836.1744657100-73680456.1743707792)
+
+---
+
+## Customize Record Page Components and Fields
+
+
