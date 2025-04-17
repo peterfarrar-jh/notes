@@ -1,3 +1,11 @@
+---
+text: "LinkedIn Learning"
+title: "Fundamentals of AWS security"
+author: "Peter Farrar"
+date: 03/31/2025
+description: "Fundamentals of AWS security"
+---
+
 # AWS Administration: Security Fundamentals
 
 ## Introduction

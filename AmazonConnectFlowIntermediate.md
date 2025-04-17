@@ -1,3 +1,11 @@
+---
+text: "AWS Skillbuilder"
+title: "Amazon Connect Flow Intermediate"
+author: "Peter Farrar"
+date: 04/02/2025
+description: "Intermediate learning on Amazon Connect Flows"
+---
+
 # Amazon Connect Flows Intermediate
 
 Find the course [here](https://explore.skillbuilder.aws/learn/courses/19869/amazon-connect-flows-intermediate)

@@ -1,3 +1,11 @@
+---
+text: "none"
+title: "GitHub Copilot"
+author: "Peter Farrar"
+date: 04/14/2025
+description: "Notes on Micorsoft Presentation on GitHub CoPilot"
+---
+
 # Fuel Up Friday - April 2025
 
 # GitHub Copilot

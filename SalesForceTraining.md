@@ -1,3 +1,11 @@
+---
+text: "TrailHead"
+title: "Salesforce Training"
+author: "Peter Farrar"
+date: 04/14/2025
+description: "Notes on Salesforce training on TrailHead"
+---
+
 # SalesForce/TrailHead
 
 ## Create a custom object

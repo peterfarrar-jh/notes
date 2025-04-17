@@ -1,3 +1,11 @@
+---
+text: "AWS Skillbuilder"
+title: "Amazon Connect Flow Fundamentals"
+author: "Peter Farrar"
+date: 04/02/2025
+description: "Learning basics on Amazon Connect Flows"
+---
+
 # Amazon Connect Flows Fundamentals
 
 Find the course [here](https://explore.skillbuilder.aws/learn/courses/19837/amazon-connect-flows-fundamentals/lessons/131380/amazon-connect-flows-fundamentals)

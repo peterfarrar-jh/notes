@@ -1,3 +1,11 @@
+---
+text: "AWS Skillbuilder"
+title: "Amazon Connect Flows Lambda Integration Fundamentals"
+author: "Peter Farrar"
+date: 04/03/2025
+description: "Learning basics on Amazon Connect Flows integration with Lambda"
+---
+
 # Amazon Connect Flows Lambda Integrations Fundamentals
 
 ## Introduction to Amazon Connect Flows and Lambda Integration
