@@ -450,4 +450,21 @@ CodeDeploy needs to know which files to copy, what scripts to run, and where to 
 * _AWS Config_ continuously monitors and records resource configurations and enables automated evaluation of them.
 * _AWS CloudTrail_ logs, monitors, and retains account activity related to actions across the infrastructure. It can be used for compliance, auditing, to detect unusual behavior, and more.
 
+## Demo: Create and Control a CI/CD Pipeline
+
+### Demo high-level overview
+
+Steps completed before Demo:  
+
+* Required infrastructure has been provisioned into two AWS Regions
+* An appspec.yml file and supporting scripts have been added to the repo
+* A Lambda function that checks text on a webpage has beed created
+
+Durring the demo:  
+
+* Review of provisioned infrustructure with template file
+* AWS CodeCommit configuration to hold code, and to start the pipeline with every code change
+* AWS CodeDeploy configuration with deployment Region specifics to install the application on the infrastrucure
+* AWS CodePipeline is used to create a two stage pipeline to deploy a simple web app to Region 1. Two new stages are added to deploy to Region 2, with a manual approval. Finally a Lambda is used to replace the manual approval with an automated one.
+
 
