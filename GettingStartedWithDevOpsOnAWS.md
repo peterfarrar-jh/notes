@@ -300,13 +300,154 @@ Remember, DevOps solutions might comprise AWS services and third-party solutions
 
 #### AWS CodePipeline
 
+A continuous delivery service to model, visualize, and automate steps in the software release process.  
+
+* Capture and visualize pipelines, run them, view real-time status, retry failed actoins.
+* Automating the release process eliminates human error, speeds up deliver, and improves the quality of releases.
+* Establish a consistent release process.
+* Incorporate source, build, and deploy tools.
+* View pipeline history details.
+* Integrate with thrid-party and AWS tools to build, test, and deploy code changes.
+
+##### Monitoring
+
+Pipelines can be monitored in the AWS CodePipeline console, the CLI, using Amazon EventBridge, or AWS CloudTrail.  
+
+##### Security
+
+CodePipeline supports resource-level permissions. For more information see [Security in AWS CodePipeline](https://docs.aws.amazon.com/codepipeline/latest/userguide/security.html).  
+
+##### How it works
+
+Break the release process into stages. Each state has a number of actions to perform. Actions are tasks that run either in sequence or parallel. Each action is associated with a service provider that runs the action, or user intervention. Service providers can be AWS services like CodeBuild, Amazon S3, AWS Lambda, AWS CloudFormation, or third party services like Jinkins, and TeamCity.  
+
+Action types:  
+
+* Source (where source is stored)
+* Build (how to build the application)
+* Test (how to test the application)
+* Deploy (how to deploy the application)
+* Approval (manual approval and notifications)
+* Invoke (Invoke a custom function)
+
+A simple pipeline might consist of three stages:  
+
+1. Source: Retrieve the source code from a repo (GitHub)
+2. Build: Compile or transpile the source (CodeBuild)
+3. Deploy: Deploy the application (CodeDeploy) 
+
 #### AWS CodeCommit
+
+CodeCommit is a git repository.
+
+##### Why use?
+
+* Eliminate administrative overhead of managing hardware.
+* Collaborate with team using git commands.
+* Improve your existing workflow by integrating CodeCommit with other AWS services, IDEs, and third-party software.
+
+##### Monitoring
+
+Create notifications and trigger actions based on events in source control.  
+
+##### Security
+
+Security is managed with policies and user accounts. Read more about Security in [AWS CodeCommit](https://docs.aws.amazon.com/codecommit/latest/userguide/security.html).  
+
+##### How it works
+
+It works just like git.  
 
 #### AWS CodeBuild
 
+A fully managed build service. It automatically compiles code, runs tests, and produces software packages.  
+
+##### Why use?
+
+* Eliminates the need to set up, patch, update, and manage your own build server.
+* Automatically compiles sousrce code, runs tests, builds artifacts.
+* Process multiple builds concurrently.
+* Leverage preconfigured build environments (Python, NodeJS, Go, etc.). Or create custom build environments using Docker.
+* Pull source code from CodeCommit, Amazon S3, GitHub, GitHub Enterprise, and Bitbucket.
+* Integrate with Jenkins.
+
+##### Monitoring
+
+Monitor the build using the CodeBuild console, CloudWatch Logs and other ways.  
+
+##### Security
+
+Build artifacts are encrypted and access is controlled by resource level permissions in AWS IAM policies. Read more in [Security in AWS CodeBuild](https://docs.aws.amazon.com/codebuild/latest/userguide/security.html).  
+
+##### How it works
+
+Uses a build project to create a new build environment in a docker container for each build.  
+
+1. Uses build project to run build. Build projects contain information like source repo location, runtime environment, build command, and where to store output. CodeBuild can be accessed through the CodeBuild console, or by using AWS CLI, AWS SDKs, or CodePipeline.
+2. Uses the build project to build an environemnt.
+3. Downloads the code and uses the buildspec file to run a build. Buildspec is a collection of build commands that install tools, run tests, packages the code.
+4. Outpput is uploaded to an S3 bucket.
+5. Build output is streamed to the service console and CloudWatch logs.
+6. Monitor the progress through CloudWatch or other services.
+
 #### AWS CodeDeploy
 
+A managed service that automates deployments.  
 
+##### Why use?
 
+* Deploys server, serverless, and container applications.
+* Automates deployment.
+* Deploys to a variety of copute platforms: AWS Lambda, Amazon ECS, Amazon EC2, and on prem.
+* Concurrently deploy one or multiple instances.
+* Minimize downtime. CodeDeploy can handle traffic-shifts from version to version.
+* Automatically stop and roll back from an unsuccessful deployment.
+
+##### Monitoring
+
+Tools like CloudWatch alarms and CodeDeploy console for monitoring.  
+
+##### Security
+
+Read about Security in AWS [CodeDeploy](https://docs.aws.amazon.com/codedeploy/latest/userguide/security.html).  
+
+##### How it works
+
+CodeDeploy needs to know which files to copy, what scripts to run, and where to deploy to.  
+
+* Code
+  * Identify the correct version of the code
+  * Provide an application specification file (AppSpec file) in the project root.
+  * The AppSpec file specifies where to copy the code and how to get it started.
+* Deployment group
+  * Specifies the target environment, specific to the target compute platform.
+  * Can have more than one deployment groups.
+  * Security needs to be assigned allowing the environmnet to communicate with CodeDeploy.
+  * For EC2 and on-prem, a CodeDeploy agent is required.
+* Deployment configuration
+  * A set of rules and success and failure conditions used durring deployment.
+
+### Additional services you should know about
+
+#### Integrated development environment (IDE) services
+
+* _AWS Cloud9_ is a cloud based IDE.
+
+#### Infrastructure management services
+
+* _AWS CloudFormation_ is an IaC service. that uses templates to describe the resources and dependencies needed, allowing quick, consistent provisioning and management.
+* _AWS OpsWorks_ provides managemed instances of Chef and Puppet to help automate server configuration and deployment.
+
+#### Containers and serverless services
+
+* _AWS Lambda_ is a serverless compute service that invokes code when it's needed. It can also help customize the CI/CD pipeline.
+* _Amazon Elastic Container service (Amazon ECS)_ is a container management service for Docker containers.
+
+#### Monitoring services
+
+* _AWS X-Ray_ is a distributed tracing system that helps analyze and debug distributed applications.
+* _Amazon CloudWatch_ is a monitoring and management service that provides actionable insites and information for infrastructure resources.
+* _AWS Config_ continuously monitors and records resource configurations and enables automated evaluation of them.
+* _AWS CloudTrail_ logs, monitors, and retains account activity related to actions across the infrastructure. It can be used for compliance, auditing, to detect unusual behavior, and more.
 
 
