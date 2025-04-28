@@ -280,4 +280,35 @@ That's it. The compact layout form is used at the top of record pages, and on mo
 
 ## Customize Record Page Components and Fields
 
+### Edit a Record Layout
+
+1. From the App Launcher, the your application to modify
+2. Select the tab containing the record whos layout will be modified
+3. Select a record
+4. Change the API name if you are creating a new kind of record
+5. Click the Details tab
+6. On the right side, click **Upgrade Now**
+7. Select the layout you want and click **Finish**
+8. Move fields about, or delete as required
+9. Click Save
+10. Click **Not Yet** if the page shouldn't be finished yet
+
+### Customize Related Lists
+
+1. From **Setup** click Object Manager, then find the object to deit
+2. Click **Page Layouts** and select the layout to modify
+3. Here you can click **Related Lists** and drag a Files element into the Related List section. There are other kinds of lists as well.
+4. Click *Quick Save** and **Yes**
+
+### Activate a Page
+
+1. From Setup click the Home tab
+2. Search for `App Builder` in the Quick Find box and select **Lightning App Builder**
+3. Click Edit next to the Record Page to activate
+4. Click **Activation**
+5. Select the options desired for the page
+6. Verify the selection
+7. Click **Save**
+
+You may need to refresh the page to see the changes  
 
