@@ -312,3 +312,65 @@ That's it. The compact layout form is used at the top of record pages, and on mo
 
 You may need to refresh the page to see the changes  
 
+---
+
+## Create Custom Buttons and Links
+
+### Create Custom List Button
+
+1. From **Set Up** click **Object Manager**
+2. Select the object to edit
+3. Click **Buttons, Links, and Actions**
+4. Click **New Button or Link** (top right)
+5. Name the button
+6. Select **List Button**
+7. Paste an HTML link into the large text box
+8. Click **Save**
+9. Click **OK**
+
+
+### Create a Custom Detail Page Link
+
+1. From **Set Up** click **Object Manager**
+2. Select the object to edit
+3. Click **Buttons, Links, and Actions**
+4. Click **New Button or Link** (top right)
+5. Name the button
+6. Select **List Button**
+7. Paste an HTML link with a placeholder into the large text box. Example: `https://www.google.com/search?q={!Account.Name}`
+8. Click **Save**
+9. Click **OK**
+10. Click **Page Layout** (left panel)
+11. Select the layout associated with the object
+12. Select **Custom Link** in the pallet. You will see the new link listed
+13. You can drag the link to the _Custom Links (Header not visible)_ section of the Account Details.
+14. Hover over the _Custom Links_ header.
+15. A wrench icon appears on the right. Click it.
+16. Select **Detail Page**
+17. Click **OK**
+18. Click **Save**
+
+### Create a Custom Detail Page Button
+
+1. From **Set Up** click **Object Manager**
+2. Select the object to edit
+3. Click **Buttons, Links, and Actions**
+4. Click **New Button or Link** (top right)
+5. Name the button
+6. Select **Detail Page Button**
+7. Paste an HTML link with a placeholder into the large text box. Example: `https://www.google.com/search?q={!Account.Name}`
+8. Click **Save**
+9. Click **OK**
+10. Click **Page Layout** (left panel)
+11. Select the layout associated with the object
+12. Select **Buttons** in the pallet. You will see the new button listed
+13. You can drag the link to the _Custom Buttons_ section at the top of the Account Details.
+14. Click **Save**
+
+----
+
+
+
+
+
+
