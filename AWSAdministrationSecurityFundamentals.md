@@ -1,6 +1,6 @@
 ---
 text: "LinkedIn Learning"
-title: "Fundamentals of AWS security"
+title: "AWS Administration: Security Fundamentals"
 author: "Peter Farrar"
 date: 03/31/2025
 description: "Fundamentals of AWS security"
