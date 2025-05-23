@@ -277,3 +277,63 @@ An alias is a pointer to a specific version of a function. Default behavior is f
     </table>
   </div>
 </div>
+
+### Creating a deployment pipeline
+
+A CI/CD pipeline helps automate steps and standardize quality checks when deploying software. AWS tools for pipelines:  
+
+* AWS CodeCommit for Source
+* AWS CodeBuild for Build and Test
+* AWS CodeDeploy for Production
+* AWS CodePipeline for fully managed continuous delivery
+
+For more information see the [CI/CD on AWS](https://docs.aws.amazon.com/whitepapers/latest/cicd_for_5g_networks_on_aws/cicd-on-aws.html) whitepaper.  
+
+### Automating your deployment pipeline
+
+#### Source
+
+* Check-in source code
+* Peer review
+
+#### Build
+
+* Compile code
+* Unit testing
+* Style checker
+* Create container images and deployment packages
+
+#### Test
+
+* Integration testing (with other systems)
+* Load testing
+* UI testing
+* Security testing
+
+#### Production
+
+* Deployment to production environments
+* Monitor code in production
+
+Each stage should have its own AWS account  
+
+### AWS SAM Pipelines
+
+AWS SAM Pipelines provide templates for AWS CodePipeline, Jenkins, GitHub Actions, Bitbucket Pipelines, and GitLab CI/CD.  
+
+AWS SAM Pipelines is composed of two commands:  
+
+1. `sam pipeline bootstrap` - Designed for operators, this command creates the AWS resources and permissions required to deploy application artifacts from your code repository into your AWS environments. 
+2. `sam pipeline init` - Designed for developers, this command generates a pipeline configuration file that your CI/CD system can use to deploy serverless applications using AWS SAM. 
+
+`sam pipeline init --bootstrap` combines the two commands above.  
+
+SAM produces a configuration file for the pipeline of choice.  
+
+### Creating pipeline deployment resources
+
+`sam pipeline init --bootstrap` is a guided process that creates a template file with the AWS resources needed to deploy code from a repository into an AWS environment.  
+
+`sam deploy` will deploy the pipeline using the template file.  
+
+[comment]: # (Review the video and follow up language. It lays out everything you need to know to get started building pipelines. Add summary steps below)  
