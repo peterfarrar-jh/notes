@@ -1,3 +1,3 @@
 # Notes
 
-A repo to keep my notes on things  
+A repo to keep my training notes  
